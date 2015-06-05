@@ -1,0 +1,30 @@
+import sys
+
+class FastQC:
+	def sequence(self, inputFile, outputFile):
+		#run fastqc from dockerfile with given parameters?
+
+
+
+addr = 'localhost' #setting the address
+
+len_argv = len(sys.argv)
+
+if len_argv < 2:
+	sys.exit("\n Not enough arguments")
+
+port = sys.argv[1]
+#seq = fastQC.Client(["{0}:{1}".format(addr, port)])
+	#this is sending the files to fastQC
+#fastQC needs to be active on the port that the memory is being sent to
+#otherwise it will not be computed
+
+if len_argv > 2:
+	param1 = str(sys.argv[2])
+
+elif len_argv == 2:
+	print("\n 1 more arg please")
+
+elif len_argv == 3:
+	param2 = str(sys.argv[3])
+	print "\n Sequencing data from {0}. New directory: {1}.".format(param1,param2)

@@ -1,0 +1,2 @@
+# fastqc
+docker fastqc

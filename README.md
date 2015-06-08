@@ -14,7 +14,7 @@ Sometimes sudo is needed, change directory names as necessary
 	-i sets the container to be interactive
 	--name indicates the name, --name choose_name
 
-	docker run --name choose_name -i -v host_dir:container:dir image_name
+	docker run --name choose_name -i -v host_dir:container_dir image_name
 
 	docker run --name fastqc -i -v '/home/conrad/fastQC_docker/fastq_files/':/fastqc/data conradstoerker/fastqc
 

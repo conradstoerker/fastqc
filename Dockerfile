@@ -22,12 +22,12 @@ ENV FASTQC_ZIP fastqc_v0.11.3.zip
 RUN apt-get update
 
 # Install tools
-RUN apt-get install --yes openjdk-7-jre-headless perl unzip
+RUN apt-get install --yes openjdk-7-jre-headless unzip
 
 
 # Download and Install FastQC
 ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/${FASTQC_ZIP} /tmp/
-RUN cd /usr/local ; unzip /tmp/fastqc_*.zip
+RUN cd /usr/local ; unzip /tmp/${FASTQC_ZIP}
 RUN chmod 755 /usr/local/FastQC/fastqc
 RUN ln -s /usr/local/FastQC/fastqc /usr/local/bin/fastqc
 

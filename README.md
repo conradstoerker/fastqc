@@ -4,6 +4,8 @@ Sometimes sudo is needed, change directory names as necessary
 #Build a new docker image for fastqc using the Dockerfile from your current directory
 
 	docker build -t name/fastqc .
+	
+	docker build -t conradstoerker/fastqc .
 
 	
 #Run the fastqc image as an interactive container:

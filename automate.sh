@@ -3,7 +3,7 @@
 #The FILEPATH should be changed to whatever directory contains the fastq files
 #FILEPATH is the path on your computer, DOCKERPATH is the path in the container
 FILEPATH='/home/conrad/fastQC_docker/fastq_files/'
-DOCKERPATH='/fastqc/data conradstoerker/fastqc'
+DOCKERPATH='/fastqc/data'
 
 #Container and Image names
 CNAME='fastqc'

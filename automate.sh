@@ -1,8 +1,9 @@
 #!/bin/bash
 
 FILEPATH='/home/conrad/fastQC_docker/fastq_files/'
-if [[ -z "$1"]]; then
+if [ -d "$1"]; then
 	FILEPATH="$1"
+fi
 	
 echo Restarting docker...  
 sudo service docker stop  

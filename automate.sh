@@ -1,5 +1,9 @@
 #!/bin/bash
 
+FILEPATH='/home/conrad/fastQC_docker/fastq_files/'
+if [[ -z "$1"]]; then
+	FILEPATH="$1"
+	
 echo Restarting docker...  
 sudo service docker stop  
 sudo service docker start
@@ -10,10 +14,13 @@ sudo docker rm -f fastqc
 echo pulling conradstoerker/fastqc...
 sudo docker pull conradstoerker/fastqc
 
-# change '/home/conrad/fastQC_docker/fastq_files/' to the directory with your fastq files
 echo running conradstoerker/fastqc...
-sudo docker run --name fastqc -i -v '/home/conrad/fastQC_docker/fastq_files/':/fastqc/data conradstoerker/fastqc
+sudo docker run --name fastqc -i -v $FILEPATH:/fastqc/data conradstoerker/fastqc
+
+#echo fastqc version:
+#fastqc -v
 
 echo exiting...
 sudo docker rm -f fastqc
-
+#exit
+ 

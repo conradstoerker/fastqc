@@ -8,6 +8,7 @@
 #the first installs if you don't have it, the second will update your current docker
 echo Making sure you have the latest docker package...
 #wget -qO- https://get.docker.com/ | sh
+#sudo usermod -aG docker [your_user]
 wget -N https://get.docker.com/ | sh
 
 

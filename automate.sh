@@ -10,7 +10,7 @@ sudo service docker stop
 sudo service docker start
 
 #Must remove a preexisting container with the name we are going to use
-sudo docker rm -f fastqc
+#sudo docker rm -f fastqc
 
 echo pulling conradstoerker/fastqc...
 sudo docker pull conradstoerker/fastqc
@@ -22,6 +22,6 @@ sudo docker run --name fastqc -v $FILEPATH:/fastqc/data conradstoerker/fastqc
 #fastqc -v
 
 echo exiting...
-sudo docker rm -f fastqc
+sudo docker rm fastqc
 #exit
  

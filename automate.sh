@@ -24,12 +24,6 @@ echo Restarting docker...
 sudo service docker stop  
 sudo service docker start
 
-#Remove a preexisting container with the name we are going to use if it exists, not necessary because at the end it is removed
-#sudo docker rm -f $CNAME
-
-echo pulling $IMGNAME...
-sudo docker pull $IMGNAME
-
 echo running $IMGNAME...
 sudo docker run --name $CNAME -v $FILEPATH:$DOCKERPATH $IMGNAME
 

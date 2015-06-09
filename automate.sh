@@ -16,8 +16,8 @@ echo Restarting docker...
 service docker stop  
 service docker start
 
-#Must remove a preexisting container with the name we are going to use
-sudo docker rm -f fastqc
+#Remove a preexisting container with the name we are going to use if it exists
+#sudo docker rm -f fastqc
 
 echo pulling conradstoerker/fastqc...
 sudo docker pull conradstoerker/fastqc

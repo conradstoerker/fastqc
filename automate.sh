@@ -16,7 +16,7 @@ echo pulling conradstoerker/fastqc...
 sudo docker pull conradstoerker/fastqc
 
 echo running conradstoerker/fastqc...
-sudo docker run --name fastqc -i -v $FILEPATH:/fastqc/data conradstoerker/fastqc
+sudo docker run --name fastqc -v $FILEPATH:/fastqc/data conradstoerker/fastqc
 
 #echo fastqc version:
 #fastqc -v

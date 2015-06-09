@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#FILEPATH is the path on your computer, DOCKERPATH is the path in the container
 FILEPATH='/home/conrad/fastQC_docker/fastq_files/'
 DOCKERPATH='/fastqc/data conradstoerker/fastqc'
 

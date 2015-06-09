@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#The FILEPATH should be changed to whatever directory contains the fastq files
 #FILEPATH is the path on your computer, DOCKERPATH is the path in the container
 FILEPATH='/home/conrad/fastQC_docker/fastq_files/'
 DOCKERPATH='/fastqc/data conradstoerker/fastqc'
@@ -24,14 +25,13 @@ sudo service docker stop
 sudo service docker start
 
 #Remove a preexisting container with the name we are going to use if it exists, not necessary because at the end it is removed
-#sudo docker rm -f fastqc
+#sudo docker rm -f $CNAME
 
 echo pulling $IMGNAME...
 sudo docker pull $IMGNAME
 
-#The path should be changed to whatever directory contains the fastq files
 echo running $IMGNAME...
-sudo docker run --name $CNAME -v $FILEPATH:$DOCKERPATH
+sudo docker run --name $CNAME -v $FILEPATH:$DOCKERPATH $IMGNAME
 
 echo removing the container and exiting...
 sudo docker rm -f $CNAME

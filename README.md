@@ -11,14 +11,14 @@ Sometimes sudo is needed, change directory names as necessary
 #Run the fastqc image as an interactive container:
 
 	-v sets the directory, volume, to be used, -v host_dir:container_dir
-	-i sets the container to be interactive
+	-i sets the container to be interactive, can be used to keep the container open
 	--name indicates the name, --name choose_name
 
 	docker run --name choose_name -i -v host_dir:container_dir image_name
 
-	docker run --name fastqc -i -v '/home/conrad/fastQC_docker/fastq_files/':/fastqc/data conradstoerker/fastqc
+	docker run --name fastqc -v '/home/conrad/fastQC_docker/fastq_files/':/fastqc/data conradstoerker/fastqc
 
-	typing "exit" will bring you back to the terminal
+	typing "exit" will bring you back to the terminal if your container is interactive
 
 
 once the container has been run once, run it again by typing

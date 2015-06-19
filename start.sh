@@ -1,14 +1,16 @@
 #!/bin/bash
 
 
+KMERS=''
+
 for file in /fastqc/data/*.fastq
 do
-	fastqc $file
+	fastqc -k $KMERS $file
 done
 
 for file in /fastqc/data/*.fastq.gz
 do
-	fastqc $file
+	fastqc -k $KMERS $file
 done
 
 exit

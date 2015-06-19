@@ -3,12 +3,12 @@
 
 for file in /fastqc/data/*.fastq
 do
-	fastqc --with-failed-reads $file
+	fastqc $file
 done
 
 for file in /fastqc/data/*.fastq.gz
 do
-	fastqc --with-failed-reads $file
+	fastqc $file
 done
 
 exit

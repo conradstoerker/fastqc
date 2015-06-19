@@ -1,7 +1,6 @@
 #!/bin/bash
 
-file in /fastqc/data/kmer.txt
-KMERS= read $file
+KMERS=$1
 
 for file in /fastqc/data/*.fastq
 do
